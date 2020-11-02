@@ -1,0 +1,5 @@
+ &input
+   fildyn = 'H3S.dynG',
+   zasr  = 'simple',
+   flfrc = 'H3S.666.fc'
+ /

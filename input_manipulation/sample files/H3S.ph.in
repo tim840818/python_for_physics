@@ -1,0 +1,13 @@
+phonons on a uniform q-grid
+ &inputph
+  tr2_ph=1.0d-14
+  prefix = 'q6k18f36',
+  amass(1) = 1.008
+  amass(2) = 32.06
+  ldisp  = .true.
+  nq1 = 6
+  nq2 = 6
+  nq3 = 6
+  outdir = './tmp',
+  fildyn = 'H3S.dynG'
+/

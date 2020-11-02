@@ -1,0 +1,39 @@
+H3S
+ &control
+  calculation = 'scf'
+  restart_mode='from_scratch',
+  prefix = 'q6k18f36',
+  verbosity = 'high',
+  tstress = .true.
+  tprnfor = .true.
+  pseudo_dir = '/data3/twchang/qe/H3S/oncv_pbe/pseudo',
+  outdir = './tmp'
+ /
+ &system
+  ibrav = 3
+  A = 2.9985
+  nat = 4
+  ntyp = 2
+  ecutwfc = 62.0,
+  ecutrho = 620.0
+  occupations = 'smearing',
+    degauss = 0.03
+    smearing = 'gaussian'
+ /
+ &electrons
+  diagonalization = 'david'
+  mixing_mode = 'plain'
+  mixing_beta = 0.7
+  conv_thr =  1.0d-8
+ /
+ATOMIC_SPECIES
+H    1.008  H_ONCV_PBE_sr.upf
+S   32.060  S_ONCV_PBE_sr.upf
+ATOMIC_POSITIONS {crystal}
+H    0.500000000000000 -0.500000000000000  0.000000000000000
+H    0.000000000000000  0.500000000000000 -0.500000000000000
+H    0.500000000000000  0.000000000000000  0.500000000000000
+S    0.000000000000000  0.000000000000000  0.000000000000000
+
+K_POINTS automatic
+18 18 18  0 0 0
